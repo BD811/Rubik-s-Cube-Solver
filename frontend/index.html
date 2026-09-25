@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit Cube Solver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar"><div><p class="eyebrow">C++ search laboratory</p><h1>Orbit <span>Cube Solver</span></h1></div><div class="status-dot"><i></i> Engine ready</div></header>
+    <section class="workspace">
+      <aside class="panel editor-panel"><div class="panel-heading"><div><p class="eyebrow">01 / Input</p><h2>Map your cube</h2></div><span class="badge">54 stickers</span></div><p class="hint">Select a color, then click stickers in the net. Centers are fixed.</p><div id="palette" class="palette"></div><div class="editor-actions"><button id="validate" class="button primary">Validate cube</button><button id="scramble" class="button ghost">Generate scramble</button><button id="reset" class="button text">Reset to solved</button></div><div id="validation" class="message" role="status">Ready for a cube state.</div></aside>
+      <section class="cube-stage"><div class="stage-label"><span>Live state</span><span id="state-count">Solved</span></div><div id="cube-net" class="cube-net" aria-label="Interactive cube sticker net"></div><div class="legend"><span><b class="legend-swatch white"></b>U / White</span><span><b class="legend-swatch green"></b>F / Green</span><span><b class="legend-swatch red"></b>R / Red</span></div></section>
+      <aside class="panel solution-panel"><div class="panel-heading"><div><p class="eyebrow">02 / Solve</p><h2>Search result</h2></div><span id="move-count" class="big-number">--</span></div><div class="solution-line"><span>Solution sequence</span><strong id="solution">Awaiting validation</strong></div><div class="current-move"><span>Current move</span><strong id="current-move">-</strong></div><div class="progress-row"><span>Progress</span><strong id="progress">0 / 0</strong></div><div class="progress-track"><i id="progress-bar"></i></div><div class="controls"><button id="first" class="icon-button" title="First move">|&lt;</button><button id="previous" class="icon-button" title="Previous move">&lt;</button><button id="play" class="play-button" title="Play or pause">Play</button><button id="next" class="icon-button" title="Next move">&gt;</button><button id="last" class="icon-button" title="Last move">&gt;|</button></div><button id="solve" class="button solve-button">Solve with C++ BFS</button><div id="benchmark" class="benchmark"></div></aside>
+    </section>
+    <footer><span>State model: 54 stickers</span><span>Bidirectional BFS / bounded depth</span><span>Vanilla HTML, CSS &amp; JS</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

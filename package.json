@@ -1,0 +1,8 @@
+{
+  "name": "rubiks-cube-solver",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A vanilla frontend backed by a C++ bidirectional BFS Rubik's Cube solver.",
+  "scripts": { "start": "node backend/server.js", "build:cpp:wsl": "powershell -ExecutionPolicy Bypass -File .\\scripts\\build-wsl.ps1" },
+  "dependencies": { "express": "^4.21.2" }
+}
